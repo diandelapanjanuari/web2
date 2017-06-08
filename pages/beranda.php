@@ -1,12 +1,10 @@
         <div class="row">
-
             <!-- Blog Entries Column -->
             <div class="col-md-8">
-
                 <!-- First Blog Post -->
                 <?php foreach ($isi_berita as $ib) { ?>
                 <h2>
-                <a href="ambildata.php">
+                <a href="ambildatabuku.php">
                     <h1> <?php echo $ib['judul'] ?> </h1>
                     </a> 
                    <!-- <a href="ambildata.php">Blog Post Title</a> -->
@@ -18,13 +16,9 @@
                 <hr>
                 <p> <?php echo $ib ['isi'] ?> </p>
                 
-
-                
-            <?php }?>
-            
-
-                <hr>
-
+            <?php }
+            ?>
+             <hr>
                 <!-- Pager -->
                 <ul class="pager">
                     <li class="previous">
@@ -34,7 +28,6 @@
                         <a href="#">Newer &rarr;</a>
                     </li>
                 </ul>
-
             </div>
 
 

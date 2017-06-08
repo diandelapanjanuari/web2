@@ -1,6 +1,6 @@
 <?php
 	$host = "localhost";
-	$dbname = "sisfonews";
+	$dbname = "dian_buku";
 	$username = "root";
 	$password = " ";
 	$db = "";//db adalah objek dari class PDO
@@ -12,7 +12,7 @@
 		die("Connection error: ".$exception->getMessage());
 	}
 
-		$query = $db->prepare("SELECT * FROM Berita");//prepare konsepnya hanyalah mempersiapkan bahan bahan yang di perlukan 
+		$query = $db->prepare("SELECT * FROM Buku");//prepare konsepnya hanyalah mempersiapkan bahan bahan yang di perlukan 
 		$query->execute();
 		$data = $query->fetchAll();?>
 
@@ -23,11 +23,11 @@
 		<th>penulis</th>
 	</tr>
 
-<?php foreach ($data as $ib) { ?>
+<?php foreach ($data as $bk) { ?>
 	<tr>
-		<td><?php echo $ib['id_buku'] ?></td>
-		<td><?php echo $ib['judul'] ?></td>
-		<td><?php echo $ib['penulis'] ?></td>
+		<td><?php echo $bk['id_buku'] ?></td>
+		<td><?php echo $bk['judul'] ?></td>
+		<td><?php echo $bk['penulis'] ?></td>
 	</tr>
 	
  <?php }?>
